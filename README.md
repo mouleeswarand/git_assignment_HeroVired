@@ -2,7 +2,7 @@
 
 https://github.com/mouleeswarand/git_assignment_HeroVired
 
-Assignment 1 -  CalculatorPlus - GitHub Commands
+Q1 -  CalculatorPlus - GitHub Commands
 
 Step 1: GitHub repository: git clone https://github.com/mouleeswarand/git_assignment_HeroVired.git
 
@@ -95,7 +95,7 @@ git checkout main
 git merge dev
 
 
-Assignment 2 -  LFS(200 MB) - GitHub Commands
+Q2 -  LFS(200 MB) - GitHub Commands
 
 Download and Install the https://git-lfs.github.com/
 git lfs install
@@ -111,7 +111,7 @@ git lfs ls-files	#16e122e099 * herovired_lfs.zip
 git clone https://github.com/mouleeswarand/git_assignment_HeroVired.git
 git lfs pull
 
-Assignment 3 -  calculates the area of a circle and the area of a rectangle - GitHub Commands
+Q3 -  calculates the area of a circle and the area of a rectangle - GitHub Commands
 
 Step 1 : Create a New Branch (feature/circle-area)
 
