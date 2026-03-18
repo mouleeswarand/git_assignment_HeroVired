@@ -18,3 +18,7 @@ if __name__ == "__main__":
     width = 6
 
     print(f"The area of the rectangle with length {length} and width {width} = {calculator.calculate_rectangle_area(length, width)}")
+    
+    radius = 5
+
+    print(f"The area of the circle with radius {radius} = {calculator.calculate_circle_area(radius)}")
