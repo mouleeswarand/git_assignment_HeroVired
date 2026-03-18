@@ -88,9 +88,29 @@ Step 9: Pull Request Workflow
 Create PR (feature/sqrt -> Dev)
 Request review
 Make changes if needed
+
 Step 10: Final Merge
 Create PR (Dev - > main)
 git checkout main
 git merge dev
+
+
+Assignment 2 -  LFS(200 MB) - GitHub Commands
+
+Download and Install the https://git-lfs.github.com/
+git lfs install
+git init
+git lfs track "*.zip"
+It create .gitattributes folder
+Now add the binary folder (200 mb) in the folder
+git add .gitattributes
+git add large-file.zip
+git commit -m "Add large binary file using Git LFS"
+git push --set-upstream origin lfs
+git lfs ls-files	#16e122e099 * herovired_lfs.zip
+git clone https://github.com/mouleeswarand/git_assignment_HeroVired.git
+git lfs pull
+
+
 git tag v2.0
 git push origin main --tags
