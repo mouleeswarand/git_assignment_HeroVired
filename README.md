@@ -111,6 +111,104 @@ git lfs ls-files	#16e122e099 * herovired_lfs.zip
 git clone https://github.com/mouleeswarand/git_assignment_HeroVired.git
 git lfs pull
 
+Assignment 3 -  calculates the area of a circle and the area of a rectangle - GitHub Commands
+
+Step 1 : Create a New Branch (feature/circle-area)
+
+git checkout -b feature/circle-area
+Add the code
+import math
+
+class GeometryCalculator:
+
+def calculate_circle_area(self, radius):
+
+return math.pi * radius ** 2
+
+def calculate_rectangle_area(self, length, width):
+
+return length * width
+
+if __name__ == "__main__":
+
+calculator = GeometryCalculator()
+
+git add .
+git commit -m “Area of the Circle”
+git push origin feature/circle-area
+
+Step 2 : Stash the Circle - Area command
+
+git stash
+git status	#Verify that the working directory is clean
+
+radius = 5
+
+print(f"The area of the circle with radius {radius} =
+
+{calculator.calculate_circle_area(radius)}")
+
+Step 3 : Create a New Branch (feature/rectangle-area)
+
+git checkout -b feature/rectangle-area
+Add the code
+import math
+
+class GeometryCalculator:
+
+def calculate_circle_area(self, radius):
+
+return math.pi * radius ** 2
+
+def calculate_rectangle_area(self, length, width):
+
+return length * width
+
+if __name__ == "__main__":
+
+calculator = GeometryCalculator()
+
+git add .
+git commit -m “Area of the Rectangle”
+git push origin feature/rectangle-area
+
+Step 4 : Stash the Rectangle - Area command
+
+git stash
+git status	#Verify that the working directory is clean
+
+length = 10
+
+width = 6
+
+print(f"The area of the rectangle with length {length} and width {width} = {calculator.calculate_rectangle_area(length, width)}")
+
+Step 5 : move back to Branch (feature/circle-area)
+Git checkout feature/circle-area
+Git stash list #stash@{1} - Circle Area stash@{0} - rectangle area
+git stash apply "stash@{1}" 
+Git add .
+Git commit -m “circle area with formula”
+Git push origin feature/circle-area
+
+Step 6 : move back to Branch (feature/rectangle-area)
+Git checkout feature/rectangle-area
+Git stash list #stash@{1} - Circle Area stash@{0} - rectangle area
+git stash pop	#this will bring the stash@{0} - rectangle area
+Git add .
+Git commit -m “rectangle area with formula”
+Git push origin feature/rectangle-area
+
+Step 7 : pull request to the ‘dev’ branch
+PR → feature/circle-area → dev
+PR → feature/rectangle-area → dev
+git checkout dev
+git merge feature/circle-area
+git merge feature/rectangle-area
+git checkout main
+git merge dev
+
+
 
 git tag v2.0
 git push origin main --tags
