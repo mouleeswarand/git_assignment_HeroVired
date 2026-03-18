@@ -14,3 +14,6 @@ if __name__ == "__main__":
 
     calculator = GeometryCalculator()
     
+    radius = 5
+
+    print(f"The area of the circle with radius {radius} = {calculator.calculate_circle_area(radius)}")
